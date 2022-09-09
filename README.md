@@ -5,9 +5,9 @@
 # 目錄  
 >+ [**1. 課程介紹** ](https://github.com/SAStommy/Web#課程介紹)
 >+ [**2. 自我介紹**](https://github.com/SAStommy/Web#自我介紹)
->+ **3. 課程筆記區**
->+ **4. 作業連結區**
->+ **5. 專題連結區**
+>+ [**3. 課程筆記區**](https://github.com/SAStommy/Web#課程筆記區)
+>+ [**4. 作業連結區**](https://github.com/SAStommy/Web#作業連結區)
+>+ [**5. 專題連結區**](https://github.com/SAStommy/Web#專題連結區)
 ---
 
 # 課程介紹
@@ -26,8 +26,8 @@
 **E-mail**：mingfungto@gmail.com
 
 # 課程筆記區
->+ **Week 1**
->+ **Week 2**
+>+ [**Week 1**](https://github.com/SAStommy/Web#Week 1)
+>+ [**Week 2**](https://github.com/SAStommy/Web#Week 2)
 >+ **Week 3**
 >+ **Week 4**
 >+ **Week 5**
@@ -44,6 +44,22 @@
 >+ **Week 16**
 ---
 
+# 作業連結區
+>+ **HW 1**
+>+ **HW 2**
+>+ **HW 3**
+>+ **HW 4**
+>+ **HW 5**
+---
+
+# 專題連結區
+>+ **專題 1:**
+---
+
+# Week 1
++ 課程介紹
+
+# Week 2
 
  
 
