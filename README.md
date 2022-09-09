@@ -26,8 +26,8 @@
 **E-mail**：mingfungto@gmail.com
 
 # 課程筆記區
->+ [**Week 1**](https://github.com/SAStommy/Web#Week1)
->+ [**Week 2**](https://github.com/SAStommy/Web#Week2)
+>+ [**Week 1**](https://github.com/SAStommy/Web#Week-1)
+>+ [**Week 2**](https://github.com/SAStommy/Web#Week-2)
 >+ **Week 3**
 >+ **Week 4**
 >+ **Week 5**
