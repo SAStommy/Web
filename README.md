@@ -28,7 +28,7 @@
 # 課程筆記區
 >+ [**Week 1**](https://github.com/SAStommy/Web#Week-1)
 >+ [**Week 2**](https://github.com/SAStommy/Web#Week-2)
->+ **Week 3**
+>+ [**Week 3**](https://github.com/SAStommy/Web#Week-3)
 >+ **Week 4**
 >+ **Week 5**
 >+ **Week 6**
@@ -62,7 +62,16 @@
 [回目錄](https://github.com/SAStommy/Web#目錄)
 
 # Week 2
++ Web 1.0時代是單向的,是只能顯示資料
 
+## 堂課
+> [**task 1** : 更改html模板](https://sastommy.github.io/Web/mypage/)
+>
+> **目標** : 簡單展示web1.0特性
+
+[回目錄](https://github.com/SAStommy/Web#目錄)
+
+# Week 3
  
 
 
