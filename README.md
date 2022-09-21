@@ -72,10 +72,12 @@
 [回目錄](https://github.com/SAStommy/Web#目錄)
 
 # Week 3
-+ **資訊傳送過程:osi模型**
+### 資訊傳送過程---osi模型
+> **資訊傳送過程主要分為七層進行**
 
 ![osi七層架構](https://images.vocus.cc/76c1f12c-6735-4275-a82c-f00ae8ef1c28.jpg)\
 **圖源** : https://vocus.cc/article/618c7853fd8978000108c4d5
+
 
 
  
