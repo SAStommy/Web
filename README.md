@@ -73,7 +73,7 @@
 
 # Week 3
 + 資訊傳送過程:osi模型\
-![osi七層架構](C:\Users\hp8470\OneDrive\圖片\螢幕擷取畫面)
+![osi七層架構](C:\Users\hp8470\OneDrive\圖片\螢幕擷取畫面\osi.PNG)
 
 
  
