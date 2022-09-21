@@ -73,7 +73,6 @@
 
 # Week 3
 + 資訊傳送過程:osi模型\
-![osi七層架構](E:\ram photo)
 
 
  
