@@ -72,9 +72,8 @@
 [回目錄](https://github.com/SAStommy/Web#目錄)
 
 # Week 3
-+ 資訊傳送過程
-
-
++ 資訊傳送過程:osi模型\
+![osi七層架構](C:\Users\hp8470\OneDrive\圖片\螢幕擷取畫面)
 
 
  
