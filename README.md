@@ -73,7 +73,7 @@
 
 # Week 3
 + 資訊傳送過程:osi模型\
-![osi七層架構]()
+![osi七層架構](https://images.vocus.cc/76c1f12c-6735-4275-a82c-f00ae8ef1c28.jpg)
 
 
  
