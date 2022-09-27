@@ -30,7 +30,7 @@
 >+ [**Week 2**](https://github.com/SAStommy/Web#Week-2)
 >+ [**Week 3**](https://github.com/SAStommy/Web#Week-3)
 >+ [**Week 4**](https://github.com/SAStommy/Web#Week-4)
->+ **Week 5**
+>+ [**Week 5**](https://github.com/SAStommy/Web#Week-5)
 >+ **Week 6**
 >+ **Week 7**
 >+ **Week 8**
@@ -110,6 +110,18 @@
 [回目錄](https://github.com/SAStommy/Web#目錄)
 
 # Week 4
++ **html 狀態碼**
+  + 100-199 參考資料
+  + 200-299 成功
+  + 300-399 重新導向
+  + 400-499 用戶端錯誤
+  + 500-599 伺服器錯誤
+  
++ **Web 2.0 可以雙向互動,瀏覽者能夠在網頁設計者的程計下對網頁進行改變,同時網頁設計者也能在網頁中回饋**
+
+[回目錄](https://github.com/SAStommy/Web#目錄)
+
+# Week 5
 
 
 
