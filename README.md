@@ -128,6 +128,11 @@
 [回目錄](https://github.com/SAStommy/Web#目錄)
 
 # Week 5
++ **用MySQL建立簡單的web 2.0(之後會在HW2中展示**
+
+[回目錄](https://github.com/SAStommy/Web#目錄)
+
+# Week 6
 
 
 
