@@ -128,12 +128,16 @@
 [回目錄](https://github.com/SAStommy/Web#目錄)
 
 # Week 5
+### Web 2.架構
+![架構介紹](https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg)\
+**圖源** : https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg
+
+
 + **用MySQL建立簡單的web 2.0(之後會在HW2中展示)**
 
 [回目錄](https://github.com/SAStommy/Web#目錄)
 
 # Week 6
-
 
 
 
