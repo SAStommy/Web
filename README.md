@@ -130,7 +130,12 @@
 # Week 5
 ### Web 2.架構
 ![架構介紹](https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg)\
-**圖源** : https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg
+**圖源** : https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg\
+
++ **Web2.0會分為三部分進行---前端,後端(node.js + mysql)**
+  + 前端 :
+  + 後端(node.js) :
+  + 後端(mysql) :
 
 
 + **用MySQL建立簡單的web 2.0(之後會在HW2中展示)**
