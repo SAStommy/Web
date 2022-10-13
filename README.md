@@ -132,10 +132,10 @@
 ![架構介紹](https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg)\
 **圖源** : https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg\
 
-+ **Web2.0會分為三部分進行---前端,後端(node.js[翻譯] + mysql[資料庫])**
-  + 前端 :
-  + 後端(翻譯) :
-  + 後端(資料庫) :
++ **Web2.0會分為三部分進行---前端,後端(node.js[中間] + mysql[資料庫])**
+  + 前端 : 顯示資料給瀏覽者,瀏覽者與網絡設計師互動的地方
+  + 後端(中間) : 連接瀏覽器和自己的電腦工作
+  + 後端(資料庫) : 把瀏覽者與網絡設計師互動的資料進行記錄,分析,處理的地方
 
 
 + **用MySQL建立簡單的web 2.0(之後會在HW2中展示)**
