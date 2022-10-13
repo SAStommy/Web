@@ -31,8 +31,8 @@
 >+ [**Week 3**](https://github.com/SAStommy/Web#Week-3)
 >+ [**Week 4**](https://github.com/SAStommy/Web#Week-4)
 >+ [**Week 5**](https://github.com/SAStommy/Web#Week-5)
->+ **Week 6**
->+ **Week 7**
+>+ [**Week 6**](https://github.com/SAStommy/Web#Week-6)
+>+ [**Week 7**](https://github.com/SAStommy/Web#Week-7)
 >+ **Week 8**
 >+ **Week 9**
 >+ **Week 10**
@@ -143,6 +143,12 @@
 [回目錄](https://github.com/SAStommy/Web#目錄)
 
 # Week 6
+
++ **用MySQL建立簡單的web 2.0(之後會在HW2中展示)**
+
+[回目錄](https://github.com/SAStommy/Web#目錄)
+
+# W
 
 
 
