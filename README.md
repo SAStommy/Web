@@ -31,8 +31,8 @@
 >+ [**Week 3**](https://github.com/SAStommy/Web#Week-3)
 >+ [**Week 4**](https://github.com/SAStommy/Web#Week-4)
 >+ [**Week 5**](https://github.com/SAStommy/Web#Week-5)
->+ **Week 6**
->+ **Week 7**
+>+ [**Week 6**](https://github.com/SAStommy/Web#Week-6)
+>+ [**Week 7**](https://github.com/SAStommy/Web#Week-7)
 >+ **Week 8**
 >+ **Week 9**
 >+ **Week 10**
@@ -120,10 +120,35 @@
 + **Web 2.0 可以雙向互動,瀏覽者能夠在網頁設計者的程計下對網頁進行改變,同時網頁設計者也能在網頁中回饋**
 + **互動原理: 需要邏輯判斷而達到互動 ➢ ➢ ➢ 使用server(中間程序)---把邏輯判斷轉化成網頁式輸出**
 
+## 堂課
+> **task 2** : 超簡單web2.0伺服器
+>
+> **目標** : 簡單展示web12.0特性
+
 [回目錄](https://github.com/SAStommy/Web#目錄)
 
 # Week 5
+### Web 2.架構
+![架構介紹](https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg)\
+**圖源** : https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg\
 
++ **Web2.0會分為三部分進行---前端,後端(node.js[中間] + mysql[資料庫])**
+  + 前端 : 顯示資料給瀏覽者,瀏覽者與網絡設計師互動的地方
+  + 後端(中間) : 連接瀏覽器和自己的電腦工作
+  + 後端(資料庫) : 把瀏覽者與網絡設計師互動的資料進行記錄,分析,處理的地方
+
+
++ **用MySQL建立簡單的web 2.0(之後會在HW2中展示)**
+
+[回目錄](https://github.com/SAStommy/Web#目錄)
+
+# Week 6
+
++ **用MySQL建立簡單的web 2.0(之後會在HW2中展示)**
+
+[回目錄](https://github.com/SAStommy/Web#目錄)
+
+# W
 
 
 
