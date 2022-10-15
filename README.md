@@ -46,7 +46,7 @@
 
 # 作業連結區
 >+ [**HW 1:超基礎教學---如何建立靜態網頁**](https://youtu.be/lJikqgQfTs4)
->+ **HW 2**
+>+ [**HW 2:超基礎教學---如何建立Web2.0**](https://youtu.be/r8noz_0ydgg)
 >+ **HW 3**
 >+ **HW 4**
 >+ **HW 5**
