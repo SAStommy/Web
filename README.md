@@ -48,6 +48,8 @@
 >+ [**HW 1:超基礎教學---如何建立靜態網頁**](https://youtu.be/lJikqgQfTs4)
 >+ [**HW 2:超基礎教學---如何建立Web2.0**](https://youtu.be/r8noz_0ydgg)
 >+ **HW 3**
+> [**Lab 1 Introduction to Amazon S3**](https://youtu.be/YFtk5DD0mMQ)
+> [**Lab 2 Introduction to Amazon ES2**](https://youtu.be/rWho8xmmnEE)
 >+ **HW 4**
 >+ **HW 5**
 ---
