@@ -51,6 +51,8 @@
 > **HW3**:[**Lab 1 Introduction to Amazon S3**](https://youtu.be/YFtk5DD0mMQ)\
 > **HW3**:[**Lab 2 Introduction to Amazon ES2**](https://youtu.be/rWho8xmmnEE)
 >+ **HW 4**
+> **HW4**:[**Lab 5 Introduction to Amazon Virtual Private Cloud (Amazon VPC)**](https://youtu.be/qmE-n9WEOv0)\
+> **HW4**:[**Lab 6 Introduction to AWS Identity and Access Management (IAM)**](https://youtu.be/d_wjzPQhzok)
 >+ **HW 5**
 ---
 
