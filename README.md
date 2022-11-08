@@ -50,7 +50,7 @@
 >+ **HW 3**\
 > **HW3**:[**Lab 1 Introduction to Amazon S3**](https://youtu.be/YFtk5DD0mMQ)\
 > **HW3**:[**Lab 2 Introduction to Amazon ES2**](https://youtu.be/rWho8xmmnEE)\
-> **注**: Lab 2沒有拿滿分原因其實是task 6完全沒評分,他的評分只有到instance running,所以做task 6後要記得去啟動instance而我忘了去啟動
+> **注**: Lab 2沒有拿滿分原因是task 6完全沒評分,他的評分只有到instance running,所以做task 6後要記得去啟動instance而我忘了去啟動
 >+ **HW 4**\
 > **HW4**:[**Lab 5 Introduction to Amazon Virtual Private Cloud (Amazon VPC)**](https://youtu.be/qmE-n9WEOv0)\
 > **HW4**:[**Lab 6 Introduction to AWS Identity and Access Management (IAM)**](https://youtu.be/d_wjzPQhzok)
