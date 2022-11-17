@@ -54,7 +54,10 @@
 >+ **HW 4**\
 > **HW4**:[**Lab 5 Introduction to Amazon Virtual Private Cloud (Amazon VPC)**](https://youtu.be/qmE-n9WEOv0)\
 > **HW4**:[**Lab 6 Introduction to AWS Identity and Access Management (IAM)**](https://youtu.be/d_wjzPQhzok)
->+ **HW 5**
+>+ **HW 5**\
+> **HW 5**:[**Lab 3 Introduction to Amazon DynamoDB**](https://youtu.be/2ASittfralY)\
+> **HW 5**:[**Lab 4 Introduction to Amazon Relational Database Service(Amazon RDS)**](https://youtu.be/2YtLtvHacg8)\
+> **HW 5**:[**Lab 7 - Hosting a Static Website Using Amazon Simple Storage Service (Amazon S3)**](https://youtu.be/AtlqKQwASvU)
 ---
 
 # 專題連結區
