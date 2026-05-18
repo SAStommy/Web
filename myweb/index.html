@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TO MING FUNG Website</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" type="image/png">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f4ef;
+  --bg2: #edeae3;
+  --ink: #1c1915;
+  --ink2: #2e2820;
+  --ink3: #5a524a;
+  --sidebar-bg: #1a1d20;
+  --sidebar2: #242830;
+  --accent: #2a5c8b;
+  --accent2: #1a3f63;
+  --gold: #c49a28;
+  --gold2: #e8b830;
+  --rule: #d4cdc2;
+  --white: #ffffff;
+  --sidebar-w: 300px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 15px; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Noto Sans TC', 'Lato', sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  min-height: 100vh;
+}
+
+/* ══ TOP NAVBAR ══ */
+.topnav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 52px;
+  background: var(--sidebar-bg);
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  z-index: 1000;
+  gap: 1.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.4);
+}
+
+.topnav-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+
+.topnav-divider {
+  width: 1px; height: 22px;
+  background: rgba(255,255,255,0.18);
+  flex-shrink: 0;
+}
+
+.topnav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  flex: 1;
+}
+
+.topnav-links a {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  padding: 0 0.85rem;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.topnav-links a:hover,
+.topnav-links a.active {
+  color: var(--gold2);
+  border-bottom-color: var(--gold2);
+}
+
+/* ── Social strip in topnav ── */
+.social-strip {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.soc-sep {
+  width: 1px; height: 18px;
+  background: rgba(255,255,255,0.13);
+  margin-right: 6px;
+}
+.soc-btn {
+  position: relative;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  font-size: 1.15rem;
+  border: 1px solid transparent;
+  transition: color 0.22s, background 0.22s, border-color 0.22s, transform 0.18s;
+}
+.soc-btn:hover {
+  color: var(--hc);
+  background: rgba(var(--hcr), 0.12);
+  border-color: rgba(var(--hcr), 0.35);
+  transform: translateY(-2px);
+}
+.soc-btn::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -26px; left: 50%;
+  transform: translateX(-50%) scale(0.85);
+  background: #111;
+  color: #e8b830;
+  font-size: 0.58rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 2px 6px; border-radius: 3px;
+  white-space: nowrap;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.18s, transform 0.18s;
+}
+.soc-btn:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* ══ LAYOUT ══ */
+.page {
+  display: flex;
+  padding-top: 52px;
+  min-height: 100vh;
+}
+
+/* ══ SIDEBAR ══ */
+.sidebar {
+  background: var(--sidebar-bg);
+  position: fixed;
+  top: 52px; left: 0; bottom: 0;
+  width: var(--sidebar-w);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+.sidebar::-webkit-scrollbar { display: none; }
+
+/* Profile */
+.profile-area {
+  padding: 1.75rem 1.5rem 1.4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Avatar: personal icon SVG instead of logo */
+.avatar-wrap {
+  width: 72px; height: 100px;
+  /*border-radius: 50%;*/
+  border: 2px solid var(--gold);
+  overflow: hidden;
+  margin-bottom: 0.9rem;
+  background: var(--sidebar2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 在原本的 .avatar-wrap 下方加入這段 */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 讓長方形圖片等比例縮放填滿圓形，多餘的部分自動裁切，不會變形 */
+}
+
+.sidebar-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.sidebar-role {
+  font-size: 0.67rem;
+  color: var(--gold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  margin-top: 0.28rem;
+}
+
+.self-intro {
+  text-indent: 2em;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.72);
+  margin-top: 0.55rem;
+  line-height: 1.6;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* ══ PROFILE ROW: text left, donut right ══ */
+.profile-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.profile-text { flex: 1; min-width: 0; }
+
+.profile-donut {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.2rem;
+}
+
+/* ══ SIDEBAR INFO ROW (contact+interest stacked) ══ */
+.sb-row {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.sb-left {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Sidebar blocks */
+.sb {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+/* Sidebar courses */
+.sb-course-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.28rem;
+}
+
+.sb-course-tag {
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.65);
+  background: rgba(42,92,139,0.2);
+  border: 1px solid rgba(42,92,139,0.35);
+  padding: 0.18rem 0.3rem;
+  border-radius: 2px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: default;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sb-course-tag:hover {
+  background: rgba(42,92,139,0.45);
+  color: rgba(255,255,255,0.9);
+}
+
+.sb-title {
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.contact-row {
+  display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;
+}
+.contact-row svg { width: 12px; height: 12px; color: rgba(255,255,255,0.4); flex-shrink: 0; }
+.contact-row a, .contact-row span {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.72);
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  transition: color 0.2s;
+}
+.contact-row a:hover { color: #fff; }
+
+.interest-pills { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.interest-pill {
+  font-size: 0.66rem;
+  background: rgba(42,92,139,0.28);
+  border: 1px solid rgba(42,92,139,0.5);
+  color: rgba(255,255,255,0.78);
+  padding: 0.18rem 0.55rem;
+  border-radius: 2px;
+  font-family: 'Lato', sans-serif;
+}
+
+/* ══ DONUT CHART ══ */
+.donut-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.donut-container {
+  position: relative;
+  width: 125px;
+  height: 125px;
+  margin: 0.3rem auto 0;
+  cursor: default;
+}
+
+.donut-svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+
+.donut-segment {
+  fill: none;
+  stroke-width: 20;
+  transition: stroke-width 0.25s ease, opacity 0.25s ease;
+  cursor: pointer;
+}
+.donut-segment:hover { stroke-width: 24; }
+
+.donut-center-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.donut-center-pct {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.28rem;
+  color: var(--gold2);
+  line-height: 1;
+  font-weight: 700;
+  display: block;
+}
+
+.donut-center-label {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.6);
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.03em;
+  display: block;
+  margin-top: 0.15rem;
+  max-width: 75px; /*適應變大的字體*/
+  line-height: 1.3;
+}
+
+/* ══ MAIN ══ */
+.main {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  padding: 2.5rem 2.75rem 2.5rem;
+  min-width: 0;
+}
+
+/* Section */
+.section {
+  margin-bottom: 2.75rem;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.section.visible { opacity: 1; transform: translateY(0); }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1.5px solid var(--rule);
+}
+
+.section-num {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--accent);
+  opacity: 0.65;
+}
+
+.section-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+}
+
+.section-icon {
+  margin-left: auto;
+  width: 18px; height: 18px;
+  color: var(--rule);
+}
+
+/* Entry */
+.entry {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0 1.6rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--bg2);
+}
+.entry:first-of-type { padding-top: 0; }
+.entry:last-child { border-bottom: none; padding-bottom: 0; }
+
+.entry-meta { text-align: right; padding-top: 2px; }
+.entry-period { font-family: 'Lato', sans-serif; font-size: 0.71rem; color: var(--ink3); font-style: italic; line-height: 1.6; }
+.entry-org { font-size: 0.63rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.22rem; font-family: 'Lato', sans-serif; font-weight: 700; }
+
+.entry-title { font-family: 'Noto Serif TC', serif; font-size: 0.92rem; font-weight: 500; color: var(--ink); line-height: 1.45; margin-bottom: 0.35rem; }
+.entry-sub { font-size: 0.69rem; color: var(--ink3); letter-spacing: 0.04em; margin-bottom: 0.45rem; font-family: 'Lato', sans-serif; }
+.entry-desc { font-size: 0.79rem; color: var(--ink2); line-height: 1.85; font-family: 'Noto Sans TC', sans-serif; }
+
+/* Cert chips inside education entry */
+.cert-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.6rem;
+}
+
+.cert-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #f0ece4;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  padding: 0.22rem 0.65rem 0.22rem 0.45rem;
+  font-size: 0.71rem;
+  color: var(--ink2);
+  font-family: 'Noto Sans TC', sans-serif;
+  border-radius: 0 2px 2px 0;
+}
+
+.cert-chip-year {
+  font-size: 0.62rem;
+  color: var(--ink3);
+  font-family: 'Lato', sans-serif;
+  margin-left: 0.35rem;
+}
+
+.fill-placeholder {
+  background: var(--bg2);
+  border-left: 3px solid var(--rule);
+  padding: 0.55rem 0.75rem;
+  color: var(--ink3);
+  font-size: 0.72rem;
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+  min-height: 2.4rem;
+  line-height: 1.7;
+}
+
+/* Course tags */
+.course-grid { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.course-tag {
+  font-size: 0.74rem;
+  color: var(--ink2);
+  background: var(--white);
+  border: 1px solid var(--rule);
+  padding: 0.25rem 0.8rem;
+  border-radius: 2px;
+  font-family: 'Noto Sans TC', sans-serif;
+  transition: all 0.2s;
+  cursor: default;
+}
+.course-tag:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* Awards */
+.award-item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 0 0.9rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--bg2);
+  align-items: start;
+}
+.award-item:last-child { border-bottom: none; }
+.award-year { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.78rem; color: var(--accent); padding-top: 2px; }
+.award-name { font-size: 0.79rem; color: var(--ink2); line-height: 1.6; font-family: 'Noto Sans TC', sans-serif; }
+
+.award-item-body { display: flex; flex-direction: column; }
+
+.award-desc {
+  font-size: 0.71rem;
+  color: var(--ink3);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-style: italic;
+  margin-top: 0.2rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--bg2);
+  line-height: 1.6;
+  min-height: 1.3rem;
+}
+
+/* Job description bullets */
+.job-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: var(--bg2);
+  border-left: 3px solid var(--rule);
+  padding: 0.55rem 0.75rem;
+  color: var(--ink3);
+  font-size: 0.72rem;
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+  min-height: 2.4rem;
+  line-height: 1.7;
+}
+
+.job-bullets li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.79rem;
+  color: var(--ink2);
+  line-height: 1.85;
+  font-family: 'Noto Sans TC', sans-serif;
+  margin-bottom: 0.18rem;
+}
+
+.job-bullets li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.68em;
+  top: 0.38em;
+}
+
+.job-bullet-placeholder {
+  color: var(--ink3) !important;
+  font-style: italic;
+}
+
+/* Project */
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent);
+  padding: 1.4rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.project-name { font-family: 'Noto Serif TC', serif; font-size: 0.98rem; font-weight: 600; color: var(--ink); margin-bottom: 0.55rem; }
+.project-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.9rem; }
+.project-tag { font-size: 0.63rem; background: var(--accent); color: #fff; padding: 0.13rem 0.5rem; border-radius: 2px; font-family: 'Lato', sans-serif; letter-spacing: 0.04em; opacity: 0.85; }
+.project-desc { font-size: 0.79rem; color: var(--ink2); line-height: 1.85; font-family: 'Noto Sans TC', sans-serif; }
+.project-desc ul { list-style: none; padding: 0; }
+.project-desc ul li { padding-left: 1.1rem; position: relative; margin-bottom: 0.28rem; }
+.project-desc ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.68em; top: 0.32em; }
+
+/* ══ SKILLS — Horizontal bars, two columns ══ */
+.skills-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2.5rem;
+}
+
+.skills-col-title {
+  font-size: 0.64rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--bg2);
+}
+
+.skill-item {
+  margin-bottom: 0.75rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.28rem;
+}
+
+.skill-name {
+  font-size: 0.74rem;
+  color: var(--ink2);
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.skill-pct {
+  font-size: 0.64rem;
+  color: var(--accent);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.skill-bar-track {
+  height: 4px;
+  background: var(--bg2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--gold2));
+  border-radius: 2px;
+  width: 0;
+  transition: width 1.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skill-bar-fill.other {
+  background: linear-gradient(90deg, #5a8a6a, var(--gold));
+}
+
+/* Footer */
+footer {
+  margin-left: var(--sidebar-w);
+  padding: 1.25rem 2.75rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg);
+}
+.footer-copy { font-size: 0.66rem; color: var(--ink3); font-family: 'Lato', sans-serif; letter-spacing: 0.06em; }
+.footer-note { font-size: 0.62rem; color: var(--ink3); font-family: 'Lato', sans-serif; font-style: italic; }
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 900px) {
+  :root { --sidebar-w: 100%; }
+  .topnav-links { display: flex; }
+  .page { flex-direction: column; }
+  .sidebar { position: relative; width: 100%; height: auto; top: 0; }
+  .main, footer { margin-left: 0; padding: 1.5rem; }
+  .entry { grid-template-columns: 100px 1fr; }
+  .skills-two-col { grid-template-columns: 1fr; gap: 1rem; }
+  .sb-right { width: 130px; }
+}
+
+@media (max-width: 480px) {
+  .entry { grid-template-columns: 1fr; }
+  .entry-meta { text-align: left; }
+  .skills-two-col { grid-template-columns: 1fr; }
+  .sb-row { flex-direction: column; }
+  .sb-right { width: 100%; padding: 0 1.5rem 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="topnav">
+  <div class="topnav-brand">杜洺鋒</div>
+  <div class="topnav-divider"></div>
+  <ul class="topnav-links">
+    <li><a href="#education">學歷</a></li>
+    <li><a href="#experience">工作經歷</a></li>
+    <li><a href="#project">作品</a></li>
+    <li><a href="#skills">技能</a></li>
+    <li><a href="#awards">獎項</a></li>
+  </ul>
+  <div class="social-strip">
+    <div class="soc-sep"></div>
+    <a class="soc-btn" href="https://www.facebook.com/mingfung.to.7" target="_blank" title="Facebook"
+       style="--hc:#4f9eff;--hcr:79,158,255"><i class="bx bxl-facebook"></i></a>
+    <a class="soc-btn" href="https://www.instagram.com/mingfungto/" target="_blank" title="Instagram"
+       style="--hc:#f77ab0;--hcr:247,122,176"><i class="bx bxl-instagram"></i></a>
+    <a class="soc-btn" href="https://line.me/ti/p/j82sfCS2Sp" target="_blank" title="LINE"
+       style="--hc:#4cc764;--hcr:76,199,100"><i class="bx bx-message-rounded-detail"></i></a>
+    <a class="soc-btn" href="https://github.com/SAStommy" target="_blank" title="GitHub"
+       style="--hc:#e0e0e0;--hcr:224,224,224"><i class="bx bxl-github"></i></a>
+    <a class="soc-btn" href="mailto:mingfungto@gmail.com" title="Email"
+       style="--hc:#e8b830;--hcr:232,184,48"><i class="bx bxl-gmail"></i></a>
+  </div>
+</nav>
+
+<div class="page">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+  <div class="profile-area">
+    <div class="profile-inner">
+      <div class="profile-text">
+        <!-- Personal avatar: geometric initials icon -->
+        <div class="avatar-wrap">
+          <img src="my-photo.jpg" alt="個人圖片" class="profile-img">
+        </div>
+        <div class="sidebar-name">杜洺鋒</div>
+        <div class="sidebar-role">碩士生</div>
+      </div>
+      <!-- Donut right of profile text -->
+      <div class="profile-donut">
+        <div class="donut-wrap">
+          <div class="sb-title" style="margin-bottom:0.35rem;">目前跨域分布</div>
+          <div class="donut-container">
+            <svg class="donut-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <circle class="donut-segment" cx="100" cy="100" r="72"
+                stroke="#2a5c8b" stroke-dasharray="271.4 180.9" stroke-dashoffset="0"
+                data-label="資訊科技" data-pct="60%"/>
+              <circle class="donut-segment" cx="100" cy="100" r="72"
+                stroke="#c49a28" stroke-dasharray="90.5 361.9" stroke-dashoffset="-271.4"
+                data-label="統計分析" data-pct="20%"/>
+              <circle class="donut-segment" cx="100" cy="100" r="72"
+                stroke="#7ba3c8" stroke-dasharray="45.2 407.1" stroke-dashoffset="-361.9"
+                data-label="社會科學" data-pct="10%"/>
+              <circle class="donut-segment" cx="100" cy="100" r="72"
+                stroke="#4cae8a" stroke-dasharray="45.2 407.1" stroke-dashoffset="-407.1"
+                data-label="人力資源" data-pct="10%"/>
+              <circle cx="100" cy="100" r="55" fill="#1a1d20"/>
+            </svg>
+            <div class="donut-center-text">
+              <span class="donut-center-pct" id="donutPct">資訊</span>
+              <span class="donut-center-label" id="donutLabel">主要領域</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="self-intro">我是一個充滿好奇心的人，總是主動接觸不同領域的知識並持續精進自我。雖然目前仍有進步空間，但我抱持渴望成長的心，期盼各界給予肯定與機會。我將全力以赴以展現最大價值的實力</div>
+  </div>
+
+  <div class="sb-row">
+    <div class="sb-left">
+      <div>
+        <div class="sb-title">聯絡方式</div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          <a href="mailto:mingfungto@gmail.com">mingfungto@gmail.com</a>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          <span>國立陽明交通大學</span>
+        </div>
+      </div>
+      <div>
+        <div class="sb-title">研究興趣</div>
+        <div class="interest-pills">
+          <span class="interest-pill">資料探勘</span>
+          <span class="interest-pill">機器學習</span>
+          <span class="interest-pill">人工智慧</span>
+          <span class="interest-pill">生醫資訊</span>
+        </div>
+      </div>
+      <div>
+        <div class="sb-title">相關修課</div>
+        <div class="sb-course-grid">
+          <span class="sb-course-tag" title="程式語言">程式語言</span>
+          <span class="sb-course-tag" title="資料結構">資料結構</span>
+          <span class="sb-course-tag" title="演算法">演算法</span>
+          <span class="sb-course-tag" title="軟體工程">軟體工程</span>
+          <span class="sb-course-tag" title="資料庫系統">資料庫系統</span>
+          <span class="sb-course-tag" title="線性代數">線性代數</span>
+          <span class="sb-course-tag" title="教育資料探勘專題制作">教育資料探勘</span>
+          <span class="sb-course-tag" title="教育大數據專題制作">教育大數據專題制作</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- Education -->
+  <section class="section" id="education">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">學歷</h2>
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M12 14l9-5-9-5-9 5 9 5zM12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+      </svg>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta">
+        <div class="entry-period">2025 —<br>就讀中</div>
+        <div class="entry-org">國立陽明交通大學</div>
+      </div>
+      <div class="entry-body">
+        <div class="entry-title">國立陽明交通大學<br>數據科學與工程研究所（碩士）</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta">
+        <div class="entry-period">2025 —<br>就讀中</div>
+        <div class="entry-org">國立臺灣師範大學</div>
+      </div>
+      <div class="entry-body">
+        <div class="entry-title">國立臺灣師範大學<br>科技應用與人力資源發展學系（碩士）</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta">
+        <div class="entry-period">2021 — 2025</div>
+        <div class="entry-org">國立臺灣師範大學</div>
+      </div>
+      <div class="entry-body">
+        <div class="entry-title">國立臺灣師範大學<br>科技應用與人力資源發展學系（學士）</div>
+        <div class="entry-desc" style="margin-top:0.3rem; color:var(--ink3); font-size:0.75rem;">GPA 3.89 / 4.3</div>
+        <!-- Cert chips under NTNU -->
+        <div class="cert-chips">
+          <div class="cert-chip">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#c49a28" stroke-width="2"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+            財務金融學分學程
+            <span class="cert-chip-year">· 2025</span>
+          </div>
+          <div class="cert-chip">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#c49a28" stroke-width="2"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+            教育大數據微學程
+            <span class="cert-chip-year">· 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">工作經歷</h2>
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+      </svg>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta">
+        <div class="entry-period">2025.01 —<br>現在</div>
+        <div class="entry-org">國立臺灣師範大學</div>
+      </div>
+      <div class="entry-body">
+        <div class="entry-title">專任助理</div>
+        <div class="entry-sub">教育學院: 多元、優勢、全方位之生涯發展標竿計畫</div>
+        <div class="entry-desc">
+          <ul class="job-bullets">
+            <li class="job-bullet-placeholder">協助AI子計畫的研究執行</li>
+            <li class="job-bullet-placeholder">研究AI如何協肋生涯發展</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta">
+        <div class="entry-period">2025.03 —<br>2025.12</div>
+        <div class="entry-org">智齡科技</div>
+      </div>
+      <div class="entry-body">
+        <div class="entry-title">AI 實習生</div>
+        <div class="entry-sub">專案團隊</div>
+        <div class="entry-desc">
+          <ul class="job-bullets">
+            <li class="job-bullet-placeholder">負責整合LLM與真實醫療資料的AI產品功能開發，除AI外，包括網頁全端開發</li>
+            <li class="job-bullet-placeholder">LLM回應與穩定性優化，保證LLM回應真確性</li>
+            <li class="job-bullet-placeholder">利用AI agent及MCP框架實現多功能任務並且具備良好的可擴展性</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta">
+        <div class="entry-period">2024.08 —<br>2025.12</div>
+        <div class="entry-org">國立臺灣師範大學</div>
+      </div>
+      <div class="entry-body">
+        <div class="entry-title">研究助理</div>
+        <div class="entry-sub">公民教育與活動領導學系</div>
+        <div class="entry-desc">
+          <ul class="job-bullets">
+            <li class="job-bullet-placeholder">統計方法制定與統計分析及英文論文撰寫，如用R語言跑迴歸，用mplus跑結構方程模型</li>
+            <li class="job-bullet-placeholder">資料蒐集和處理，如用python爬蟲與資料清洗</li>
+            <li class="job-bullet-placeholder">資料探勘與文字探勘應用，如LDA，情感分析</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta">
+        <div class="entry-period">2024.09 —<br>2025.12</div>
+        <div class="entry-org">國立臺灣師範大學</div>
+      </div>
+      <div class="entry-body">
+        <div class="entry-title">教學助理</div>
+        <div class="entry-sub">教育大數據微學程計畫</div>
+        <div class="entry-desc">
+          <ul class="job-bullets">
+            <li class="job-bullet-placeholder">協助課程教材準備</li>
+            <li class="job-bullet-placeholder">指導學生資料分析操作、批改作業</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project -->
+  <section class="section" id="project">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">作品</h2>
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+      </svg>
+    </div>
+    <div class="project-card">
+      <div class="project-name">個人興趣取向大學選擇器</div>
+      <div class="project-tags">
+        <span class="project-tag">Hugging Face</span>
+        <span class="project-tag">Python</span>
+        <span class="project-tag">HTML/CSS/JS</span>
+        <span class="project-tag">教育</span>
+        <span class="project-tag">遊戲化</span>
+        <span class="project-tag">性格分析</span>
+        <span class="project-tag">AI 應用</span>
+      </div>
+      <div class="project-desc">
+        <ul>
+          <li>透過遊戲化(半開放式RPG)設計收集使用者的行為並結合Hugging Face語言模型分析使用者特質推薦適合的大學科系</li>
+          <li>後端採用Python FastAPI建置，前端以HTML/CSS/JS呈現互動介面</li>
+          <li>榮獲2025畢業專題競賽佳作；同年於ICTE科技教育國際研討會發表</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills — horizontal bars, two columns -->
+  <section class="section" id="skills">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">技能</h2>
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+      </svg>
+    </div>
+    <div class="skills-two-col">
+      <!-- Left: IT skills -->
+      <div class="skills-col">
+        <div class="skills-col-title">資訊（主要領域）</div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Python</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">HTML</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">CSS</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">JavaScript</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">React</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Node.js</span><span class="skill-pct">60%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="60"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">MySQL</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
+      </div>
+      <!-- Right: cross-domain skills -->
+      <div class="skills-col">
+        <div class="skills-col-title">其它（跨域技能）</div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">R</span><span class="skill-pct">65%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill other" data-width="65"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Mplus</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill other" data-width="75"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">JASP</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill other" data-width="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">SPSS</span><span class="skill-pct">60%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill other" data-width="60"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section class="section" id="awards">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2 class="section-title">榮譽獎項</h2>
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+      </svg>
+    </div>
+    <div class="award-item"><span class="award-year">2025</span>
+      <div class="award-item-body"><span class="award-name">AI 金融創新黑客松（Hack to the Top）— 雋寬特別獎</span>
+        <div class="award-desc">
+          <li><strong>鼓勵作品實際應用在金融交易、或可優化交易策略的研究效率的解決方案，獎勵金額僅次於第一名</strong></li>
+          <li>運用AI技術自動整理上市櫃公司資料並生成擬人化的角色介紹，透過對話方式協助使用者理解股票特性，讓新手擁有認識適合自己的股票投資機會。</li>
+          <li>使用firebase作為資料庫，swift作為IOS前端，vercel作為serverless API(typescript)並在8小時內快速完成MVP開發</li>
+        </div>
+      </div>
+    </div>
+    <div class="award-item"><span class="award-year">2025</span>
+      <div class="award-item-body"><span class="award-name">ICTE 科技教育國際研討會 — 畢業專題發表</span>
+        <div class="award-desc">
+          <li><strong>進行全英語發表以及跨國交流</strong></li>
+        </div>
+      </div>
+    </div>
+    <div class="award-item"><span class="award-year">2025</span>
+      <div class="award-item-body"><span class="award-name">畢業專題競賽 — 個人興趣取向大學選擇器 佳作</span>
+        <div class="award-desc">
+          <li><strong>擔任專題組長，競賽第三名</strong></li>
+        </div>
+      </div>
+    </div>
+    <div class="award-item"><span class="award-year">2025</span>
+      <div class="award-item-body"><span class="award-name">雙北程式設計節城市儀表板大黑客松競賽 — 決賽入圍</span>
+        <div class="award-desc">
+          <li><strong>根據雙北政府規定，結合公開資料開發創新城市儀表板應用，提供市民即時資訊</strong></li>
+          <li>使用Go語言為後端，Vue建置前端介面，在工具限制和框架支援下完成4個新的儀表板功能模組</li>
+        </div>
+      </div>
+    </div>
+    <div class="award-item"><span class="award-year">2024</span>
+      <div class="award-item-body"><span class="award-name">僑務委員會 僑生獎學金</span>
+        <div class="award-desc">
+          <li><strong>提供給在台就學的成績優異之僑生</strong></li>
+        </div>
+      </div>
+    </div>
+    <div class="award-item"><span class="award-year">2022</span>
+      <div class="award-item-body"><span class="award-name">華僑協會 僑生獎學金</span>
+        <div class="award-desc">
+          <li><strong>提供給在台就學的成績優異之僑生</strong></li>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2025 杜洺鋒 · 版權所有 · All Rights Reserved</div>
+  <div class="footer-note">個人履歷</div>
+</footer>
+
+<script>
+/* ══ DONUT HOVER ══ */
+const segments = document.querySelectorAll('.donut-segment');
+const donutPct = document.getElementById('donutPct');
+const donutLabel = document.getElementById('donutLabel');
+const defaultPct = '資訊';
+const defaultLabel = '主要領域';
+
+function highlightSegment(label, pct) {
+  donutPct.textContent = pct;
+  donutLabel.textContent = label;
+  segments.forEach(s => {
+    s.style.opacity = (s.dataset.label === label) ? '1' : '0.25';
+  });
+}
+
+function resetHighlight() {
+  donutPct.textContent = defaultPct;
+  donutLabel.textContent = defaultLabel;
+  segments.forEach(s => s.style.opacity = '1');
+}
+
+segments.forEach(seg => {
+  seg.addEventListener('mouseenter', () => highlightSegment(seg.dataset.label, seg.dataset.pct));
+  seg.addEventListener('mouseleave', resetHighlight);
+});
+
+/* ══ SKILL BARS ══ */
+function animateBars() {
+  document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+    bar.style.width = bar.dataset.width + '%';
+  });
+}
+
+/* ══ SECTION REVEAL ══ */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      if (entry.target.id === 'skills') {
+        setTimeout(animateBars, 150);
+      }
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.section').forEach(s => observer.observe(s));
+
+/* Animate bars immediately if already visible on load */
+window.addEventListener('load', () => {
+  const skillsSection = document.getElementById('skills');
+  if (skillsSection) {
+    const rect = skillsSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight) setTimeout(animateBars, 350);
+  }
+});
+
+/* ══ ACTIVE NAV ══ */
+const navLinks = document.querySelectorAll('.topnav-links a');
+const navObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const a = document.querySelector(`.topnav-links a[href="#${entry.target.id}"]`);
+      if (a) a.classList.add('active');
+    }
+  });
+}, { threshold: 0.35 });
+document.querySelectorAll('section[id]').forEach(s => navObserver.observe(s));
+</script>
+</body>
+</html>
